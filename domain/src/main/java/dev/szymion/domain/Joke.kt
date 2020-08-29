@@ -1,4 +1,3 @@
 package dev.szymion.domain
 
-class Joke {
-}
+data class Joke(val id: Long)

@@ -21,6 +21,12 @@ allprojects {
     }
 }
 
+subprojects { subProject ->
+    //this allows to run detekt or ktlint for a specific module
+    // example usage: ./gradlew :data:ktlintFormat
+    apply from: "$project.rootDir/commonFiles/gradleScript/kotlin-code-quality.gradle"
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }

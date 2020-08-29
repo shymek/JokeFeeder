@@ -17,4 +17,8 @@ object Versions {
     const val jUnit = "4.13"
     const val androidXJunit = "1.1.2"
     const val androidXEspresso = "3.3.0"
+    const val ktLint = "0.35.0"
+
+    // plugins versions
+    const val detektVersion = "1.9.1"
 }

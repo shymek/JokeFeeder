@@ -22,6 +22,15 @@ object Dependencies {
             "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     }
 
+    object Lint {
+        const val detekt = "io.gitlab.arturbosch.detekt:detekt-cli:${Versions.detektVersion}"
+        const val ktLint = "com.pinterest:ktlint:${Versions.ktLint}"
+    }
+
+    object Plugins {
+        const val DETEKT = "io.gitlab.arturbosch.detekt"
+    }
+
     object Test {
         const val androidXJunit = "androidx.test.ext:junit:${Versions.androidXJunit}"
         const val androidXEspresso =
