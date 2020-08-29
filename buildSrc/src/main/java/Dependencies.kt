@@ -9,6 +9,7 @@ object Dependencies {
 
     object Module {
         const val domain = ":domain"
+        const val remote = ":remote"
     }
 
     object Kotlin {
@@ -41,6 +42,11 @@ object Dependencies {
         const val main = "com.google.dagger:hilt-android:${Versions.hilt}"
         const val androidCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
         const val viewModel = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.hiltViewModel}"
+    }
+
+    object Retrofit {
+        const val main = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+        const val gsonConverter = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
     }
 
     object Test {

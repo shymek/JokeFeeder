@@ -23,6 +23,7 @@ object Versions {
     const val hilt = "2.28-alpha"
     const val hiltViewModel = "1.0.0-alpha02"
     const val materialDesign = "1.0.0"
+    const val retrofit = "2.9.0"
 
     // plugins versions
     const val detektVersion = "1.9.1"

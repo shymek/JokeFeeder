@@ -2,6 +2,7 @@ import dependencies.Dependencies
 
 apply plugin: 'java-library'
 apply plugin: 'kotlin'
+apply plugin: 'kotlin-kapt'
 apply from: Dependencies.dependency
 
 sourceCompatibility = "8"
