@@ -27,8 +27,15 @@ object Dependencies {
         const val ktLint = "com.pinterest:ktlint:${Versions.ktLint}"
     }
 
-    object Plugins {
-        const val DETEKT = "io.gitlab.arturbosch.detekt"
+    object Dagger {
+        const val dagger2 = "com.google.dagger:dagger:${Versions.dagger2}"
+        const val daggerAndroid = "com.google.dagger:dagger-android:${Versions.dagger2}"
+        const val daggerAndroidSupport =
+            "com.google.dagger:dagger-android-support:${Versions.dagger2}"
+        const val processor = "com.google.dagger:dagger-android-processor:${Versions.dagger2}"
+        const val compiler = "com.google.dagger:dagger-compiler:${Versions.dagger2}"
+        const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
+        const val hiltCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
     }
 
     object Test {

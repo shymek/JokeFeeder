@@ -18,6 +18,9 @@ object Versions {
     const val androidXJunit = "1.1.2"
     const val androidXEspresso = "3.3.0"
     const val ktLint = "0.35.0"
+    const val dagger2 = "2.21"
+    const val hilt = "2.28-alpha"
+    const val materialDesign = "1.0.0"
 
     // plugins versions
     const val detektVersion = "1.9.1"

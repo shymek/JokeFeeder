@@ -9,6 +9,15 @@ dependencies {
     implementation Dependencies.AndroidX.appCompat
     implementation Dependencies.AndroidX.constraintLayout
 
+    implementation Dependencies.Dagger.dagger2
+    implementation Dependencies.Dagger.daggerAndroid
+    implementation Dependencies.Dagger.daggerAndroidSupport
+    kapt Dependencies.Dagger.processor
+    kapt Dependencies.Dagger.compiler
+
+    implementation Dependencies.Dagger.hilt
+    kapt Dependencies.Dagger.hiltCompiler
+
     testImplementation Dependencies.Test.junit
     androidTestImplementation Dependencies.Test.androidXJunit
     androidTestImplementation Dependencies.Test.androidXEspresso
