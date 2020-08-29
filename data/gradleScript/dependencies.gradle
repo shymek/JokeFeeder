@@ -3,6 +3,7 @@ import dependencies.Dependencies
 apply from: Dependencies.common
 
 dependencies {
-    implementation Dependencies.AndroidX.liveData
+    implementation project(Dependencies.Module.domain)
+
     implementation Dependencies.javax
 }

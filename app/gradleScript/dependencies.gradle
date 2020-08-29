@@ -4,6 +4,7 @@ apply from: Dependencies.common
 
 dependencies {
     implementation project(Dependencies.Module.domain)
+    implementation project(Dependencies.Module.data)
     implementation project(Dependencies.Module.remote)
 
     implementation Dependencies.AndroidX.core
@@ -20,6 +21,7 @@ dependencies {
     implementation Dependencies.Hilt.main
     implementation Dependencies.Hilt.viewModel
     kapt Dependencies.Hilt.androidCompiler
+    kapt Dependencies.Hilt.compiler
 
     testImplementation Dependencies.Test.junit
     androidTestImplementation Dependencies.Test.androidXJunit

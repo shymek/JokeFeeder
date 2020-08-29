@@ -4,8 +4,8 @@ import dependencies.Versions
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'kotlin-kapt'
 apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: 'kotlin-kapt'
 
 apply from: Dependencies.dependency
 
@@ -21,6 +21,11 @@ android {
         versionName Versions.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "BASE_URL", '"https://api.icndb.com/"'
+    }
+
+    buildFeatures {
+        dataBinding = true
     }
 
     buildTypes {

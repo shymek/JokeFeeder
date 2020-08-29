@@ -24,6 +24,11 @@ object Versions {
     const val hiltViewModel = "1.0.0-alpha02"
     const val materialDesign = "1.0.0"
     const val retrofit = "2.9.0"
+    const val loggingInterceptor = "4.8.0"
+    const val javaxInject = "1"
+    const val javaxAnnotation = "1.0"
+    const val stetho = "1.5.1"
+    const val liveDataScope = "2.2.0"
 
     // plugins versions
     const val detektVersion = "1.9.1"

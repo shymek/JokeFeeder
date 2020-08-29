@@ -8,6 +8,7 @@ object Dependencies {
     object Module {
         const val domain = ":domain"
         const val remote = ":remote"
+        const val data = ":data"
     }
 
     object Kotlin {
@@ -20,6 +21,7 @@ object Dependencies {
         const val constraintLayout =
             "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
         const val fragment = "androidx.fragment:fragment-ktx:${Versions.fragment}"
+        const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.liveDataScope}"
     }
 
     object Lint {
@@ -39,12 +41,20 @@ object Dependencies {
     object Hilt {
         const val main = "com.google.dagger:hilt-android:${Versions.hilt}"
         const val androidCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
+        const val compiler = "androidx.hilt:hilt-compiler:${Versions.hiltViewModel}"
         const val viewModel = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.hiltViewModel}"
     }
 
     object Retrofit {
         const val main = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
         const val gsonConverter = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
+        const val loggingInterceptor =
+            "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}"
+    }
+
+    object Facebook {
+        const val stetho = "com.facebook.stetho:stetho:${Versions.stetho}"
+        const val stethoNetwork = "com.facebook.stetho:stetho-okhttp3:${Versions.stetho}"
     }
 
     object Test {
@@ -53,4 +63,7 @@ object Dependencies {
             "androidx.test.espresso:espresso-core:${Versions.androidXEspresso}"
         const val junit = "junit:junit:${Versions.jUnit}"
     }
+
+    const val javax = "javax.inject:javax.inject:${Versions.javaxInject}"
+    const val javaxjsr250 = "javax.annotation:jsr250-api:${Versions.javaxAnnotation}"
 }
