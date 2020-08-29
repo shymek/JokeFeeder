@@ -16,7 +16,7 @@ dependencies {
     kapt Dependencies.Dagger.processor
     kapt Dependencies.Dagger.compiler
 
-    implementation Dependencies.Hilt.hilt
+    implementation Dependencies.Hilt.main
     implementation Dependencies.Hilt.viewModel
     kapt Dependencies.Hilt.androidCompiler
 

@@ -38,7 +38,7 @@ object Dependencies {
     }
 
     object Hilt {
-        const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
+        const val main = "com.google.dagger:hilt-android:${Versions.hilt}"
         const val androidCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
         const val viewModel = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.hiltViewModel}"
     }
