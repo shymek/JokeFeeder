@@ -3,8 +3,6 @@ package dependencies
 object Dependencies {
     private const val path = "../commonFiles/gradleScript/"
     const val common = "${path}common.gradle"
-
-    //path to local dependencies
     const val dependency = "./gradleScript/dependencies.gradle"
 
     object Module {
