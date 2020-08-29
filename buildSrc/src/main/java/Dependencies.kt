@@ -20,6 +20,7 @@ object Dependencies {
         const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
         const val constraintLayout =
             "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
+        const val fragment = "androidx.fragment:fragment-ktx:1.2.5"
     }
 
     object Lint {
@@ -34,8 +35,12 @@ object Dependencies {
             "com.google.dagger:dagger-android-support:${Versions.dagger2}"
         const val processor = "com.google.dagger:dagger-android-processor:${Versions.dagger2}"
         const val compiler = "com.google.dagger:dagger-compiler:${Versions.dagger2}"
+    }
+
+    object Hilt {
         const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
-        const val hiltCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
+        const val androidCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
+        const val viewModel = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.hiltViewModel}"
     }
 
     object Test {

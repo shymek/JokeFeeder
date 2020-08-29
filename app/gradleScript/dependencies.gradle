@@ -8,6 +8,7 @@ dependencies {
     implementation Dependencies.AndroidX.core
     implementation Dependencies.AndroidX.appCompat
     implementation Dependencies.AndroidX.constraintLayout
+    implementation Dependencies.AndroidX.fragment
 
     implementation Dependencies.Dagger.dagger2
     implementation Dependencies.Dagger.daggerAndroid
@@ -15,8 +16,9 @@ dependencies {
     kapt Dependencies.Dagger.processor
     kapt Dependencies.Dagger.compiler
 
-    implementation Dependencies.Dagger.hilt
-    kapt Dependencies.Dagger.hiltCompiler
+    implementation Dependencies.Hilt.hilt
+    implementation Dependencies.Hilt.viewModel
+    kapt Dependencies.Hilt.androidCompiler
 
     testImplementation Dependencies.Test.junit
     androidTestImplementation Dependencies.Test.androidXJunit
