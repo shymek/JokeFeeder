@@ -1,0 +1,15 @@
+import dependencies.Dependencies
+
+apply from: Dependencies.common
+
+dependencies {
+    implementation project(Dependencies.Module.domain)
+
+    implementation Dependencies.AndroidX.core
+    implementation Dependencies.AndroidX.appCompat
+    implementation Dependencies.AndroidX.constraintLayout
+
+    testImplementation Dependencies.Test.junit
+    androidTestImplementation Dependencies.Test.androidXJunit
+    androidTestImplementation Dependencies.Test.androidXEspresso
+}

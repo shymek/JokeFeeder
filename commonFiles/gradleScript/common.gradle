@@ -1,0 +1,5 @@
+import dependencies.Dependencies
+
+dependencies {
+    implementation Dependencies.Kotlin.kotlinStdlib
+}
