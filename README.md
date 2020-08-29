@@ -1,1 +1,1 @@
-![Build status](https://app.bitrise.io/app/015bae2aa067e812/status.svg?token=e15-IyFfpvqiXfcm_b9OQQ)
+Master build status: ![Build status](https://app.bitrise.io/app/015bae2aa067e812/status.svg?token=e15-IyFfpvqiXfcm_b9OQQ)
