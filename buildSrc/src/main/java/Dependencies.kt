@@ -20,7 +20,7 @@ object Dependencies {
         const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
         const val constraintLayout =
             "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
-        const val fragment = "androidx.fragment:fragment-ktx:1.2.5"
+        const val fragment = "androidx.fragment:fragment-ktx:${Versions.fragment}"
     }
 
     object Lint {

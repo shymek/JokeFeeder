@@ -14,6 +14,7 @@ object Versions {
     const val androidXCore = "1.3.1"
     const val appCompat = "1.2.0"
     const val constraintLayout = "2.0.1"
+    const val fragment = "1.2.5"
     const val jUnit = "4.13"
     const val androidXJunit = "1.1.2"
     const val androidXEspresso = "3.3.0"
