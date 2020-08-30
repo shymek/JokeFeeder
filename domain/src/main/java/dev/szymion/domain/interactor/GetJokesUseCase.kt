@@ -9,9 +9,9 @@ import javax.inject.Inject
 class GetJokesUseCase @Inject constructor(
     private val jokeRepository: JokeRepository
 ) {
-    suspend fun execute(): List<Joke> {
+    suspend fun execute(amount: Int): List<Joke> {
         return withContext(Dispatchers.IO) {
-            jokeRepository.getRandomJokes(10)
+            jokeRepository.getRandomJokes(amount)
         }
     }
 }
