@@ -8,7 +8,6 @@ import androidx.annotation.StringRes
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.OnScrollListener
@@ -42,7 +41,7 @@ class JokesListFragment : Fragment() {
     }
 
     private fun observeNavigationActions() {
-        viewModel.navigationActions.observe(this, Observer { handleNavigationAction(it) })
+        viewModel.navigationActions.observe(this, { handleNavigationAction(it) })
     }
 
     private fun handleNavigationAction(action: JokesListNavigationAction) {
