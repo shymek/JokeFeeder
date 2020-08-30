@@ -1,6 +1,5 @@
 import dependencies.Dependencies
 
-//detekt implementation
 configurations {
     detekt
 }
@@ -20,16 +19,9 @@ task detekt(type: JavaExec, group: "verification", description: "Runs detekt.") 
     args = ["--config", configFile, "--input", project.file("."), "--report", "plain:$output/plain.txt,xml:$output/checkstyle.xml,html:$output/report.html"]
 }
 
-// We don't want them to be checked too since this is a demo and it's supposed to fail here.
-// check.dependsOn "detekt"
-
-// ktlint.
-
 configurations {
     ktlint
 }
-
-//ktlint implementation
 
 dependencies {
     ktlint Dependencies.Lint.ktLint
@@ -59,6 +51,3 @@ task ktlintFormat(type: JavaExec, group: "formatting") {
     classpath = configurations.ktlint
     args = ["-F", "src/**/*.kt"]
 }
-
-// We don't want them to be checked too since this is a demo and it's supposed to fail here.
-// check.dependsOn "ktlint"

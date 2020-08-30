@@ -29,5 +29,4 @@ object RemoteModule {
             BuildConfig.BASE_URL
         )
     }
-
 }

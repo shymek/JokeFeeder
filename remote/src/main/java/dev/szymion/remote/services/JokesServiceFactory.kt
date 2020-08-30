@@ -31,5 +31,4 @@ object JokesServiceFactory {
             .addInterceptor(logging)
             .build()
     }
-
 }
