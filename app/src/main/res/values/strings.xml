@@ -2,4 +2,5 @@
     <string name="app_name">JokeFeeder</string>
     <string name="title_jokes">Jokes</string>
     <string name="error_loading_jokes">Could not load jokes :(</string>
+    <string name="label_show_filters">Show Filters</string>
 </resources>

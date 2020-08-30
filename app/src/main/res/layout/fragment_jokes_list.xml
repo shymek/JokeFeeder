@@ -28,6 +28,15 @@
             app:titleTextColor="@android:color/white"
             tools:title="Superhero Squad Maker" />
 
+        <ProgressBar
+            android:id="@+id/loadingProgress"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:visibleIf="@{model.areJokesLoading}" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvJokes"
             android:layout_width="match_parent"
@@ -35,10 +44,11 @@
             app:itemBinding="@{model.jokesBinding}"
             app:items="@{model.jokes}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/loadingProgress"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            tools:listitem="@layout/row_joke" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -37,7 +37,7 @@
                 android:text="@{model.joke}"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
                 android:textSize="@dimen/text_large"
-                tools:text="Some joke goes here" />
+                tools:text="@tools:sample/lorem[15]" />
         </com.google.android.material.card.MaterialCardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
