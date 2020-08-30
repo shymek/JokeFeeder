@@ -65,10 +65,14 @@ class JokesListFragment : Fragment() {
 
                 val manager: LinearLayoutManager =
                     binding.rvJokes.layoutManager as LinearLayoutManager
-                if (manager.findLastCompletelyVisibleItemPosition() == viewModel.jokes.size - 1) {
+                if (manager.findLastCompletelyVisibleItemPosition() == manager.itemCount - LOAD_MORE_THRESHOLD) {
                     viewModel.loadJokes()
                 }
             }
         })
+    }
+
+    companion object {
+        private const val LOAD_MORE_THRESHOLD = 4
     }
 }
