@@ -165,7 +165,7 @@ exceptions:
     active: false
   TooGenericExceptionCaught:
     active: true
-    excludes: "**/test/**,**/androidTest/**,**/*.Test.kt,**/*.Spec.kt,**/*.Spek.kt"
+    excludes: "**/test/**,**/androidTest/**,**/*.Test.kt,**/*.Spec.kt,**/*.Spek.kt,**Utils.kt"
     exceptionNames:
       - ArrayIndexOutOfBoundsException
       - Error

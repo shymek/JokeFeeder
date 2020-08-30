@@ -28,7 +28,7 @@ object Versions {
     const val javaxInject = "1"
     const val javaxAnnotation = "1.0"
     const val stetho = "1.5.1"
-    const val liveDataScope = "2.2.0"
+    const val liveData = "2.2.0"
 
     // plugins versions
     const val detektVersion = "1.9.1"

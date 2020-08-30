@@ -21,7 +21,7 @@ object Dependencies {
         const val constraintLayout =
             "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
         const val fragment = "androidx.fragment:fragment-ktx:${Versions.fragment}"
-        const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.liveDataScope}"
+        const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.liveData}"
     }
 
     object Lint {
