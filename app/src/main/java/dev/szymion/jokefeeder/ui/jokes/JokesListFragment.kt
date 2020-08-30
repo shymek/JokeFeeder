@@ -9,6 +9,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.OnScrollListener
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import dev.szymion.jokefeeder.R
@@ -35,6 +38,7 @@ class JokesListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         observeNavigationActions()
+        initializeScrollListener()
     }
 
     private fun observeNavigationActions() {
@@ -53,5 +57,19 @@ class JokesListFragment : Fragment() {
 
     private fun showError(@StringRes errorText: Int) {
         Snackbar.make(binding.root, errorText, Snackbar.LENGTH_SHORT).show()
+    }
+
+    private fun initializeScrollListener() {
+        binding.rvJokes.addOnScrollListener(object : OnScrollListener() {
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                super.onScrolled(recyclerView, dx, dy)
+
+                val manager: LinearLayoutManager =
+                    binding.rvJokes.layoutManager as LinearLayoutManager
+                if (manager.findLastCompletelyVisibleItemPosition() == viewModel.jokes.size - 1) {
+                    viewModel.loadJokes()
+                }
+            }
+        })
     }
 }

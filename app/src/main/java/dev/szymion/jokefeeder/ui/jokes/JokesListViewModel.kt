@@ -26,10 +26,12 @@ class JokesListViewModel @ViewModelInject constructor(
     val areJokesLoading = ObservableBoolean()
 
     init {
-        getJokes()
+        loadJokes()
     }
 
-    fun getJokes() {
+    fun loadJokes() {
+        if (areJokesLoading.get()) return
+
         getJokesUseCase::execute.asLiveDataStatus(getRandomNumberUseCase.execute())
             .observeForever {
                 when (it) {
