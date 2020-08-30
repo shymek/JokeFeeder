@@ -1,6 +1,5 @@
 package dev.szymion.jokefeeder.ui.jokes
 
-import android.util.Log
 import androidx.databinding.ObservableArrayList
 import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
@@ -9,9 +8,12 @@ import dev.szymion.domain.base.Status
 import dev.szymion.domain.interactor.GetJokesUseCase
 import dev.szymion.domain.interactor.GetRandomNumberUseCase
 import dev.szymion.domain.models.Joke
+import dev.szymion.jokefeeder.BR
 import dev.szymion.jokefeeder.R
 import dev.szymion.jokefeeder.ui.base.BaseViewModel
+import dev.szymion.jokefeeder.ui.jokes.JokesListNavigationAction.ShowJokesLoadingError
 import dev.szymion.jokefeeder.utils.asLiveDataStatus
+import me.tatarka.bindingcollectionadapter2.ItemBinding
 
 class JokesListViewModel @ViewModelInject constructor(
     private val getJokesUseCase: GetJokesUseCase,
@@ -20,6 +22,7 @@ class JokesListViewModel @ViewModelInject constructor(
 
     val titleId = ObservableField(R.string.title_jokes)
     val jokes = ObservableArrayList<Joke>()
+    val jokesBinding: ItemBinding<Joke> = ItemBinding.of(BR.model, R.layout.row_joke)
     val areJokesLoading = ObservableBoolean()
 
     init {
@@ -39,9 +42,11 @@ class JokesListViewModel @ViewModelInject constructor(
 
     private fun handleNewJokes(data: List<Joke>) {
         jokes.addAll(data)
+        areJokesLoading.set(false)
     }
 
     private fun handleJokesLoadingError() {
-        Log.d("MVM", "error when loading jokes")
+        pushNavigationAction(ShowJokesLoadingError)
+        areJokesLoading.set(false)
     }
 }

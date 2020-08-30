@@ -61,7 +61,15 @@ object Dependencies {
     }
 
     object Google {
-        const val materialComponents = "com.google.android.material:material:${Versions.materialDesign}"
+        const val materialComponents =
+            "com.google.android.material:material:${Versions.materialDesign}"
+    }
+
+    object BindingCollectionAdapter {
+        const val adapter =
+            "me.tatarka.bindingcollectionadapter2:bindingcollectionadapter:${Versions.bindingCollectionAdapter}"
+        const val recyclerView =
+            "me.tatarka.bindingcollectionadapter2:bindingcollectionadapter-recyclerview:${Versions.bindingCollectionAdapter}"
     }
 
     object Test {

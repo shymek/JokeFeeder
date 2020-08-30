@@ -4,9 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.StringRes
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import dev.szymion.jokefeeder.R
 import dev.szymion.jokefeeder.databinding.FragmentJokesListBinding
@@ -26,5 +29,29 @@ class JokesListFragment : Fragment() {
         binding.model = viewModel
 
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        observeNavigationActions()
+    }
+
+    private fun observeNavigationActions() {
+        viewModel.navigationActions.observe(this, Observer { handleNavigationAction(it) })
+    }
+
+    private fun handleNavigationAction(action: JokesListNavigationAction) {
+        when (action) {
+            JokesListNavigationAction.ShowJokesLoadingError -> showJokesLoadingError()
+        }
+    }
+
+    private fun showJokesLoadingError() {
+        showError(R.string.error_loading_jokes)
+    }
+
+    private fun showError(@StringRes errorText: Int) {
+        Snackbar.make(binding.root, errorText, Snackbar.LENGTH_SHORT).show()
     }
 }

@@ -26,7 +26,19 @@
             app:layout_constraintTop_toTopOf="parent"
             app:titleId="@{model.titleId}"
             app:titleTextColor="@android:color/white"
-            tools:title="Superhero Squad Maker"/>
+            tools:title="Superhero Squad Maker" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvJokes"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:itemBinding="@{model.jokesBinding}"
+            app:items="@{model.jokes}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

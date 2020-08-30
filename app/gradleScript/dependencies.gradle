@@ -17,6 +17,9 @@ dependencies {
 
     implementation Dependencies.Google.materialComponents
 
+    implementation Dependencies.BindingCollectionAdapter.adapter
+    implementation Dependencies.BindingCollectionAdapter.recyclerView
+
     implementation Dependencies.Dagger.dagger2
     implementation Dependencies.Dagger.daggerAndroid
     implementation Dependencies.Dagger.daggerAndroidSupport

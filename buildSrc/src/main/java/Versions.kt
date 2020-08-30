@@ -30,6 +30,7 @@ object Versions {
     const val stetho = "1.5.1"
     const val liveData = "2.2.0"
     const val navigation = "2.3.0"
+    const val bindingCollectionAdapter = "4.0.0"
 
     // plugins versions
     const val detektVersion = "1.9.1"
