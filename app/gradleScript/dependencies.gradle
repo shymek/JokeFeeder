@@ -12,6 +12,10 @@ dependencies {
     implementation Dependencies.AndroidX.constraintLayout
     implementation Dependencies.AndroidX.fragment
     implementation Dependencies.AndroidX.liveData
+    implementation Dependencies.AndroidX.navigationFragment
+    implementation Dependencies.AndroidX.navigationUi
+
+    implementation Dependencies.Google.materialComponents
 
     implementation Dependencies.Dagger.dagger2
     implementation Dependencies.Dagger.daggerAndroid

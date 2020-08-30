@@ -22,6 +22,9 @@ object Dependencies {
             "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
         const val fragment = "androidx.fragment:fragment-ktx:${Versions.fragment}"
         const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.liveData}"
+        const val navigationFragment =
+            "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
+        const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
     }
 
     object Lint {
@@ -55,6 +58,10 @@ object Dependencies {
     object Facebook {
         const val stetho = "com.facebook.stetho:stetho:${Versions.stetho}"
         const val stethoNetwork = "com.facebook.stetho:stetho-okhttp3:${Versions.stetho}"
+    }
+
+    object Google {
+        const val materialComponents = "com.google.android.material:material:${Versions.materialDesign}"
     }
 
     object Test {
