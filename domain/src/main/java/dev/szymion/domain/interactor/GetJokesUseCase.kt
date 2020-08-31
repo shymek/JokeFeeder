@@ -9,9 +9,9 @@ import kotlinx.coroutines.withContext
 class GetJokesUseCase @Inject constructor(
     private val jokeRepository: JokeRepository
 ) {
-    suspend fun execute(amount: Int): List<Joke> {
+    suspend fun execute(amount: Int, filterExplicit: Boolean = false): List<Joke> {
         return withContext(Dispatchers.IO) {
-            jokeRepository.getRandomJokes(amount)
+            jokeRepository.getRandomJokes(amount, filterExplicit)
         }
     }
 }

@@ -10,6 +10,7 @@ interface JokesService {
     @GET("/jokes/random/{amount}")
     suspend fun getRandomJokes(
         @Path("amount") amount: Int,
+        @Query("exclude") exclude: String? = null,
         @Query("escape") escape: String = JavaScript.apiParameter
     ): JokesResponseModel
 }

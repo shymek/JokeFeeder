@@ -24,6 +24,7 @@ class JokesListViewModel @ViewModelInject constructor(
     val jokes = ObservableArrayList<Joke>()
     val jokesBinding: ItemBinding<Joke> = ItemBinding.of(BR.model, R.layout.row_joke)
     val areJokesLoading = ObservableBoolean()
+    val filterExplicit = ObservableBoolean(true)
 
     init {
         loadJokes()
@@ -32,7 +33,10 @@ class JokesListViewModel @ViewModelInject constructor(
     fun loadJokes() {
         if (areJokesLoading.get()) return
 
-        getJokesUseCase::execute.asLiveDataStatus(getRandomNumberUseCase.execute())
+        getJokesUseCase::execute.asLiveDataStatus(
+            getRandomNumberUseCase.execute(),
+            filterExplicit.get()
+        )
             .observeForever {
                 when (it) {
                     is Status.Result -> handleNewJokes(it.data)
