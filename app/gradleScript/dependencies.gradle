@@ -33,6 +33,9 @@ dependencies {
     kapt Dependencies.Hilt.compiler
 
     testImplementation Dependencies.Test.junit
-    androidTestImplementation Dependencies.Test.androidXJunit
-    androidTestImplementation Dependencies.Test.androidXEspresso
+    testImplementation Dependencies.Test.architecture
+    testImplementation Dependencies.Test.mockito
+    testImplementation Dependencies.Test.coroutines
+    testImplementation Dependencies.Test.mockitoInline
+    testImplementation Dependencies.Test.fixture
 }

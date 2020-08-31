@@ -105,6 +105,7 @@ object Dependencies {
         const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutinesTest}"
         const val mockitoInline = "org.mockito:mockito-inline:${Versions.mockitoInline}"
         const val fixture = "com.appmattus.fixture:fixture:${Versions.kotlinFixture}"
+        const val architecture = "androidx.arch.core:core-testing:2.1.0"
     }
 
     const val javax = "javax.inject:javax.inject:${Versions.javaxInject}"
