@@ -68,6 +68,18 @@ class JokeDataRepositoryTest {
         verify(mockedJokeDataStore).getRandomJokes(-42, true)
     }
 
+    @Test
+    fun `getRandomJokes with negative amount and no filtering`(): Unit = runBlocking {
+        val mockedJokes: List<JokeEntity> = fixture()
+        val mappedJokes = mockedJokes.map { Joke(it.id, it.joke, it.isExplicit) }
+        prepareJokesResponse(mockedJokes)
+
+        val jokes = jokeDataRepository.getRandomJokes(-42, false)
+
+        assertEquals(mappedJokes, jokes)
+        verify(mockedJokeDataStore).getRandomJokes(-42, false)
+    }
+
     private suspend fun prepareJokesResponse(jokes: List<JokeEntity>) {
         whenever(mockedJokeDataStore.getRandomJokes(anyOrNull(), anyOrNull())).thenReturn(jokes)
     }
