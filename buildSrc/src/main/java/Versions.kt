@@ -34,7 +34,9 @@ object Versions {
     const val jacoco = "0.16.0"
     const val gradle = "4.0.1"
     const val jUnit5 = "1.3.2.0"
-    const val jUnit5Lib = "5.3.2"
+    const val mockito = "2.2.0"
+    const val mockitoInline = "2.8.47"
+    const val coroutinesTest = "1.3.8"
 
     // plugins versions
     const val detektVersion = "1.9.1"

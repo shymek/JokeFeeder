@@ -1,28 +1,28 @@
 package dev.szymion.domain.interactor
 
-import org.junit.jupiter.api.Assertions
-import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.Test
+import org.junit.Assert.assertThrows
+import org.junit.Before
+import org.junit.Test
 
 internal class GetRandomNumberUseCaseTest {
 
     lateinit var getRandomNumberUseCase: GetRandomNumberUseCase
 
-    @BeforeEach
+    @Before
     fun setUp() {
         getRandomNumberUseCase = GetRandomNumberUseCase()
     }
 
     @Test
     fun `execute with invalid arguments from higher than to`() {
-        Assertions.assertThrows(IllegalArgumentException::class.java) {
+        assertThrows(IllegalArgumentException::class.java) {
             getRandomNumberUseCase.execute(2, 1)
         }
     }
 
     @Test
     fun `execute with invalid arguments from equal as to`() {
-        Assertions.assertThrows(IllegalArgumentException::class.java) {
+        assertThrows(IllegalArgumentException::class.java) {
             getRandomNumberUseCase.execute(2, 2)
         }
     }

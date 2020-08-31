@@ -101,9 +101,9 @@ object Dependencies {
         const val androidXEspresso =
             "androidx.test.espresso:espresso-core:${Versions.androidXEspresso}"
         const val junit = "junit:junit:${Versions.jUnit}"
-        const val jUnit5 = "org.junit.jupiter:junit-jupiter-api:${Versions.jUnit5Lib}"
-        const val jUnit5Engine = "org.junit.jupiter:junit-jupiter-engine:${Versions.jUnit5Lib}"
-        const val jUnit5Params = "org.junit.jupiter:junit-jupiter-params:${Versions.jUnit5Lib}"
+        const val mockito = "com.nhaarman.mockitokotlin2:mockito-kotlin:${Versions.mockito}"
+        const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutinesTest}"
+        const val mockitoInline = "org.mockito:mockito-inline:${Versions.mockitoInline}"
     }
 
     const val javax = "javax.inject:javax.inject:${Versions.javaxInject}"
