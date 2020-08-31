@@ -11,13 +11,11 @@ import androidx.annotation.StringRes
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.OnScrollListener
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import dev.szymion.jokefeeder.R
 import dev.szymion.jokefeeder.databinding.FragmentJokesListBinding
+import dev.szymion.jokefeeder.utils.addOnLoadMoreListener
 
 @AndroidEntryPoint
 class JokesListFragment : Fragment() {
@@ -81,17 +79,7 @@ class JokesListFragment : Fragment() {
     }
 
     private fun initializeScrollListener() {
-        binding.rvJokes.addOnScrollListener(object : OnScrollListener() {
-            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                super.onScrolled(recyclerView, dx, dy)
-
-                val manager: LinearLayoutManager =
-                    binding.rvJokes.layoutManager as LinearLayoutManager
-                if (manager.findLastCompletelyVisibleItemPosition() == manager.itemCount - LOAD_MORE_THRESHOLD) {
-                    viewModel.loadJokes()
-                }
-            }
-        })
+        binding.rvJokes.addOnLoadMoreListener(viewModel::loadJokes, LOAD_MORE_THRESHOLD)
     }
 
     companion object {
