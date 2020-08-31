@@ -5,4 +5,9 @@ apply from: Dependencies.common
 dependencies {
     implementation Dependencies.AndroidX.liveData
     implementation Dependencies.javax
+
+    testImplementation Dependencies.Test.jUnit5
+    testRuntimeOnly Dependencies.Test.jUnit5Engine
+    testImplementation Dependencies.Test.jUnit5Params
+
 }

@@ -8,6 +8,6 @@ class GetRandomNumberUseCase @Inject constructor() {
         if (from >= to) throw IllegalArgumentException("to must be greater than from")
 
         val secureRandom = SecureRandom()
-        return secureRandom.nextInt(to - from) + from
+        return secureRandom.nextInt(to - from + 1) + from
     }
 }

@@ -13,11 +13,11 @@ object Dependencies {
             "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigation}"
         const val hiltClasspath = "com.google.dagger:hilt-android-gradle-plugin:${Versions.hilt}"
         const val gradleClasspath = "com.android.tools.build:gradle:${Versions.gradle}"
+        const val jUnit5 = "de.mannodermaus.gradle.plugins:android-junit5:${Versions.jUnit5}"
     }
 
     object Plugins {
         const val ANDROID_APPLICATION = "com.android.application"
-        const val ANDROID_LIBRARY = "com.android.library"
         const val KOTLIN_ANDROID = "kotlin-android"
         const val KOTLIN_KAPT = "kotlin-kapt"
         const val KOTLIN_ANDROID_EXTENSIONS = "kotlin-android-extensions"
@@ -25,6 +25,7 @@ object Dependencies {
         const val JACOCO = "com.vanniktech.android.junit.jacoco"
         const val HILT = "dagger.hilt.android.plugin"
         const val NAVIGATION = "androidx.navigation.safeargs.kotlin"
+        const val JUNIT5 = "de.mannodermaus.android-junit5"
     }
 
     object Module {
@@ -100,6 +101,9 @@ object Dependencies {
         const val androidXEspresso =
             "androidx.test.espresso:espresso-core:${Versions.androidXEspresso}"
         const val junit = "junit:junit:${Versions.jUnit}"
+        const val jUnit5 = "org.junit.jupiter:junit-jupiter-api:${Versions.jUnit5Lib}"
+        const val jUnit5Engine = "org.junit.jupiter:junit-jupiter-engine:${Versions.jUnit5Lib}"
+        const val jUnit5Params = "org.junit.jupiter:junit-jupiter-params:${Versions.jUnit5Lib}"
     }
 
     const val javax = "javax.inject:javax.inject:${Versions.javaxInject}"
