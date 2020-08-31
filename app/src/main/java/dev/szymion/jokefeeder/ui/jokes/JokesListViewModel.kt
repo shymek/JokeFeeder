@@ -23,6 +23,7 @@ class JokesListViewModel @ViewModelInject constructor(
     val jokes = DiffObservableList(prepareJokesDiffItemCallback())
     val jokesBinding: ItemBinding<Joke> = ItemBinding.of(BR.model, R.layout.row_joke)
     val areJokesLoading = ObservableBoolean()
+    val showNoJokesView = ObservableBoolean()
     var filterExplicit = false
 
     init {
@@ -42,6 +43,7 @@ class JokesListViewModel @ViewModelInject constructor(
                     Status.Loading -> areJokesLoading.set(true)
                     is Status.Failure -> handleJokesLoadingError()
                 }
+                updateNoJokesVisibility()
             }
     }
 
@@ -60,6 +62,10 @@ class JokesListViewModel @ViewModelInject constructor(
     private fun handleJokesLoadingError() {
         pushNavigationAction(ShowJokesLoadingError)
         areJokesLoading.set(false)
+    }
+
+    private fun updateNoJokesVisibility() {
+        showNoJokesView.set(jokes.isEmpty() && !areJokesLoading.get())
     }
 
     private fun prepareJokesDiffItemCallback(): DiffUtil.ItemCallback<Joke> {
