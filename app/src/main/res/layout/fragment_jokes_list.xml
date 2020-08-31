@@ -15,19 +15,6 @@
         android:layout_height="match_parent"
         android:animateLayoutChanges="true">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
-            android:minHeight="?attr/actionBarSize"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:titleId="@{model.titleId}"
-            app:titleTextColor="@android:color/white"
-            tools:title="Superhero Squad Maker" />
-
         <ProgressBar
             android:id="@+id/loadingProgress"
             android:layout_width="match_parent"
@@ -48,7 +35,7 @@
             app:layout_constraintBottom_toTopOf="@id/loadingProgress"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="parent"
             tools:listitem="@layout/row_joke" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

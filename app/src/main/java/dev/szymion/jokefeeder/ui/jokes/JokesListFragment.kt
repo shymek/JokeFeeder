@@ -2,6 +2,9 @@ package dev.szymion.jokefeeder.ui.jokes
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.StringRes
@@ -33,15 +36,33 @@ class JokesListFragment : Fragment() {
         return binding.root
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.menu_jokes_list, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.menuFilterExplicit -> handleFilterToggle(item)
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setHasOptionsMenu(true)
         observeNavigationActions()
         initializeScrollListener()
     }
 
     private fun observeNavigationActions() {
         viewModel.navigationActions.observe(this, { handleNavigationAction(it) })
+    }
+
+    private fun handleFilterToggle(item: MenuItem) {
+        item.isChecked = !item.isChecked
+        viewModel.setFilterExplicit(item.isChecked)
     }
 
     private fun handleNavigationAction(action: JokesListNavigationAction) {
@@ -73,6 +94,6 @@ class JokesListFragment : Fragment() {
     }
 
     companion object {
-        private const val LOAD_MORE_THRESHOLD = 4
+        private const val LOAD_MORE_THRESHOLD = 1
     }
 }

@@ -2,8 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/showFilters"
-        android:icon="@drawable/ic_icon_filter"
-        android:title="@string/label_show_filters"
-        app:showAsAction="always" />
+        android:id="@+id/menuFilterExplicit"
+        android:checkable="true"
+        android:title="Filter explicit"
+        app:actionViewClass="android.widget.CheckBox"
+        app:showAsAction="withText"/>
 </menu>
