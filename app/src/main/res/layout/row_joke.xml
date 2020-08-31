@@ -33,7 +33,7 @@
                 android:id="@+id/explicitIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/margin_default"
+                android:layout_margin="@dimen/margin_small"
                 android:contentDescription="@string/cd_explicit_joke"
                 android:src="@drawable/ic_explicit_white"
                 app:layout_constraintEnd_toEndOf="parent"
