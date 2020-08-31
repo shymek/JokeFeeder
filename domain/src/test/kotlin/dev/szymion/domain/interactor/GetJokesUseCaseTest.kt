@@ -6,32 +6,27 @@ import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.verify
 import com.nhaarman.mockitokotlin2.verifyNoMoreInteractions
 import com.nhaarman.mockitokotlin2.whenever
-import dev.szymion.domain.base.BaseTestCase
 import dev.szymion.domain.models.Joke
 import dev.szymion.domain.repositories.JokeRepository
-import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
 import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 
-@ExperimentalCoroutinesApi
-class GetJokesUseCaseTest : BaseTestCase() {
+class GetJokesUseCaseTest {
 
     lateinit var getJokesUseCase: GetJokesUseCase
 
     private val mockedJokeRepository: JokeRepository = mock()
 
     @Before
-    override fun setUp() {
-        super.setUp()
+    fun setUp() {
         getJokesUseCase = GetJokesUseCase(mockedJokeRepository)
     }
 
     @After
-    override fun tearDown() {
-        super.tearDown()
+    fun tearDown() {
         verifyNoMoreInteractions(mockedJokeRepository)
     }
 

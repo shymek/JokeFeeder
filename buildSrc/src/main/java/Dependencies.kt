@@ -104,6 +104,7 @@ object Dependencies {
         const val mockito = "com.nhaarman.mockitokotlin2:mockito-kotlin:${Versions.mockito}"
         const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutinesTest}"
         const val mockitoInline = "org.mockito:mockito-inline:${Versions.mockitoInline}"
+        const val fixture = "com.appmattus.fixture:fixture:${Versions.kotlinFixture}"
     }
 
     const val javax = "javax.inject:javax.inject:${Versions.javaxInject}"

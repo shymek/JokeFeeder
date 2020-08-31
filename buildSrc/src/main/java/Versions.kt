@@ -37,6 +37,7 @@ object Versions {
     const val mockito = "2.2.0"
     const val mockitoInline = "2.8.47"
     const val coroutinesTest = "1.3.8"
+    const val kotlinFixture = "0.9.5"
 
     // plugins versions
     const val detektVersion = "1.9.1"
