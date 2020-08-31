@@ -6,4 +6,5 @@
     <string name="label_show_filters">Show Filters</string>
     <string name="label_no_jokes">No jokes :(</string>
     <string name="label_load_more">Try Loading More</string>
+    <string name="cd_explicit_joke">Explicit joke indicator</string>
 </resources>
