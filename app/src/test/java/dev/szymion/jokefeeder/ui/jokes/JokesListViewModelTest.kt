@@ -11,14 +11,13 @@ import dev.szymion.domain.interactor.GetJokesUseCase
 import dev.szymion.domain.interactor.GetRandomNumberUseCase
 import dev.szymion.domain.models.Joke
 import dev.szymion.jokefeeder.base.BaseTestCase
-import dev.szymion.jokefeeder.ui.jokes.JokesListNavigationAction.*
+import java.lang.NullPointerException
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
 import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
-import java.lang.NullPointerException
 
 @ExperimentalCoroutinesApi
 class JokesListViewModelTest : BaseTestCase() {
@@ -118,7 +117,6 @@ class JokesListViewModelTest : BaseTestCase() {
 
         verify(mockedGetRandomNumberUseCase).execute()
         verify(mockedGetJokesUseCase).execute(42, false)
-        verify(navigationActionObserver).onChanged(ShowJokesLoadingError)
+        verify(navigationActionObserver).onChanged(JokesListNavigationAction.ShowJokesLoadingError)
     }
-
 }

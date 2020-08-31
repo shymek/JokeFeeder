@@ -15,7 +15,6 @@ abstract class BaseTestCase {
     @get:Rule
     val rule = InstantTaskExecutorRule()
 
-
     @Before
     open fun setUp() {
         Dispatchers.setMain(Dispatchers.Unconfined)
