@@ -6,4 +6,10 @@ dependencies {
     implementation project(Dependencies.Module.domain)
 
     implementation Dependencies.javax
+
+    testImplementation Dependencies.Test.junit
+    testImplementation Dependencies.Test.mockito
+    testImplementation Dependencies.Test.coroutines
+    testImplementation Dependencies.Test.mockitoInline
+    testImplementation Dependencies.Test.fixture
 }
