@@ -7,7 +7,6 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import androidx.annotation.StringRes
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -72,11 +71,7 @@ class JokesListFragment : Fragment() {
     }
 
     private fun showJokesLoadingError() {
-        showError(R.string.error_loading_jokes)
-    }
-
-    private fun showError(@StringRes errorText: Int) {
-        Snackbar.make(binding.root, errorText, Snackbar.LENGTH_SHORT).show()
+        Snackbar.make(binding.root, R.string.error_loading_jokes, Snackbar.LENGTH_SHORT)
     }
 
     private fun initializeScrollListener() {
