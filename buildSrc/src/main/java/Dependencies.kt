@@ -5,6 +5,28 @@ object Dependencies {
     const val common = "${path}common.gradle"
     const val dependency = "./gradleScript/dependencies.gradle"
 
+    object ClassPaths {
+        const val kotlinGradlePluginClasspath =
+            "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
+        const val jacoco = "com.vanniktech:gradle-android-junit-jacoco-plugin:${Versions.jacoco}"
+        const val safeArgsClasspath =
+            "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigation}"
+        const val hiltClasspath = "com.google.dagger:hilt-android-gradle-plugin:${Versions.hilt}"
+        const val gradleClasspath = "com.android.tools.build:gradle:${Versions.gradle}"
+    }
+
+    object Plugins {
+        const val ANDROID_APPLICATION = "com.android.application"
+        const val ANDROID_LIBRARY = "com.android.library"
+        const val KOTLIN_ANDROID = "kotlin-android"
+        const val KOTLIN_KAPT = "kotlin-kapt"
+        const val KOTLIN_ANDROID_EXTENSIONS = "kotlin-android-extensions"
+        const val DETEKT = "io.gitlab.arturbosch.detekt"
+        const val JACOCO = "com.vanniktech.android.junit.jacoco"
+        const val HILT = "dagger.hilt.android.plugin"
+        const val NAVIGATION = "androidx.navigation.safeargs.kotlin"
+    }
+
     object Module {
         const val domain = ":domain"
         const val remote = ":remote"

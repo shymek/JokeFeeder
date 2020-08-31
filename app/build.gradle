@@ -1,12 +1,12 @@
 import dependencies.Dependencies
 import dependencies.Versions
 
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
-apply plugin: 'dagger.hilt.android.plugin'
-apply plugin: 'kotlin-kapt'
-apply plugin: "androidx.navigation.safeargs.kotlin"
+apply plugin: Dependencies.Plugins.ANDROID_APPLICATION
+apply plugin: Dependencies.Plugins.KOTLIN_ANDROID
+apply plugin: Dependencies.Plugins.KOTLIN_ANDROID_EXTENSIONS
+apply plugin: Dependencies.Plugins.HILT
+apply plugin: Dependencies.Plugins.KOTLIN_KAPT
+apply plugin: Dependencies.Plugins.NAVIGATION
 
 apply from: Dependencies.dependency
 

@@ -31,6 +31,8 @@ object Versions {
     const val liveData = "2.2.0"
     const val navigation = "2.3.0"
     const val bindingCollectionAdapter = "4.0.0"
+    const val jacoco = "0.16.0"
+    const val gradle = "4.0.1"
 
     // plugins versions
     const val detektVersion = "1.9.1"

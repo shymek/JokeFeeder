@@ -1,4 +1,7 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+import dependencies.Dependencies
+
+apply plugin: Dependencies.Plugins.JACOCO
+
 buildscript {
     ext.kotlin_version = "1.4.0"
     repositories {
@@ -6,13 +9,11 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:4.0.1"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath 'com.google.dagger:hilt-android-gradle-plugin:2.28-alpha'
-        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.3.0"
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        classpath Dependencies.ClassPaths.gradleClasspath
+        classpath Dependencies.ClassPaths.kotlinGradlePluginClasspath
+        classpath Dependencies.ClassPaths.hiltClasspath
+        classpath Dependencies.ClassPaths.safeArgsClasspath
+        classpath Dependencies.ClassPaths.jacoco
     }
 }
 
@@ -24,8 +25,6 @@ allprojects {
 }
 
 subprojects { subProject ->
-    //this allows to run detekt or ktlint for a specific module
-    // example usage: ./gradlew :data:ktlintFormat
     apply from: "$project.rootDir/commonFiles/gradleScript/kotlin-code-quality.gradle"
 }
 
