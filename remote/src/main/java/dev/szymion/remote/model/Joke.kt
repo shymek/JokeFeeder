@@ -6,5 +6,10 @@ data class Joke(
     @SerializedName("id")
     val id: Long,
     @SerializedName("joke")
-    val joke: String
-)
+    val joke: String,
+    @SerializedName("categories")
+    val categories: List<JokeCategory>
+) {
+    fun isExplicit() =
+        categories.any { it == JokeCategory.Explicit }
+}

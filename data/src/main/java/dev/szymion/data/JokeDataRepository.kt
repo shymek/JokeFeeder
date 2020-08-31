@@ -13,5 +13,5 @@ class JokeDataRepository @Inject constructor(
         return remoteStore.getRandomJokes(amount, filterExplicit).map { it.toDomain() }
     }
 
-    private fun JokeEntity.toDomain(): Joke = Joke(id, joke)
+    private fun JokeEntity.toDomain(): Joke = Joke(id, joke, isExplicit)
 }

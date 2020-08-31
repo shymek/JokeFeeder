@@ -13,9 +13,9 @@ class JokesRemoteImpl @Inject constructor(
     override suspend fun getRandomJokes(amount: Int, filterExplicit: Boolean): List<JokeEntity> =
         jokesService.getRandomJokes(amount, getFilter(filterExplicit)).jokes.map { it.toEntity() }
 
-    private fun Joke.toEntity(): JokeEntity = JokeEntity(id, joke)
+    private fun Joke.toEntity(): JokeEntity = JokeEntity(id, joke, isExplicit())
 
-    private fun getFilter(shouldFilterExplicit: Boolean): String? =
+    private fun getFilter(shouldFilterExplicit: Boolean) =
         if (shouldFilterExplicit) {
             FilterOptions.Explicit.apiParameter
         } else {

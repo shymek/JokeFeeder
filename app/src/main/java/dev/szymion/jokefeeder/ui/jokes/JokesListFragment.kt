@@ -63,7 +63,7 @@ class JokesListFragment : Fragment() {
 
     private fun handleFilterToggle(item: MenuItem) {
         item.isChecked = !item.isChecked
-        viewModel.filterExplicit = item.isChecked
+        viewModel.setExplicitFilter(item.isChecked)
     }
 
     private fun handleNavigationAction(action: JokesListNavigationAction) {
