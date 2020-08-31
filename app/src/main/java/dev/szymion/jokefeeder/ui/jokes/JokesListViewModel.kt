@@ -24,7 +24,7 @@ class JokesListViewModel @ViewModelInject constructor(
     val jokes = ObservableArrayList<Joke>()
     val jokesBinding: ItemBinding<Joke> = ItemBinding.of(BR.model, R.layout.row_joke)
     val areJokesLoading = ObservableBoolean()
-    private var filterExplicit = false
+    var filterExplicit = false
 
     init {
         loadJokes()
@@ -44,11 +44,6 @@ class JokesListViewModel @ViewModelInject constructor(
                     is Status.Failure -> handleJokesLoadingError()
                 }
             }
-    }
-
-    fun setFilterExplicit(shouldFilter: Boolean) {
-        filterExplicit = shouldFilter
-        // refresh list? filter out explicit things?
     }
 
     private fun handleNewJokes(data: List<Joke>) {

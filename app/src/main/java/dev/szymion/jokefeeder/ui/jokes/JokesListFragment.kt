@@ -39,6 +39,7 @@ class JokesListFragment : Fragment() {
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.menu_jokes_list, menu)
+        menu.findItem(R.id.menuFilterExplicit).isChecked = viewModel.filterExplicit
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -62,7 +63,7 @@ class JokesListFragment : Fragment() {
 
     private fun handleFilterToggle(item: MenuItem) {
         item.isChecked = !item.isChecked
-        viewModel.setFilterExplicit(item.isChecked)
+        viewModel.filterExplicit = item.isChecked
     }
 
     private fun handleNavigationAction(action: JokesListNavigationAction) {
