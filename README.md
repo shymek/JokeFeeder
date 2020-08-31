@@ -15,6 +15,10 @@ And for HTTP requests I used [Retrofit](https://square.github.io/retrofit/)
 
 For Dependency Injection I used [Dagger2](https://dagger.dev/) with [Hilt](https://dagger.dev/hilt/)
 
+**Code Analysis**
+
+I added [Detekt](https://github.com/detekt/detekt) and [ktLint](https://ktlint.github.io/) checks to keep the code in better shape.
+
 **Modules**
 
 I tried to separate 
