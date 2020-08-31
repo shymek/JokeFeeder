@@ -38,14 +38,17 @@ class JokesListViewModel @ViewModelInject constructor(
             filterExplicit
         )
             .observeForever {
-                when (it) {
-                    is Status.Result -> handleNewJokes(it.data)
-                    Status.Loading -> areJokesLoading.set(true)
-                    is Status.Failure -> handleJokesLoadingError()
-                }
+                handleJokesResult(it)
                 updateNoJokesVisibility()
             }
     }
+
+    private fun handleJokesResult(it: Status<List<Joke>>) =
+        when (it) {
+            is Status.Result -> handleNewJokes(it.data)
+            Status.Loading -> areJokesLoading.set(true)
+            is Status.Failure -> handleJokesLoadingError()
+        }
 
     fun setExplicitFilter(shouldFilter: Boolean) {
         filterExplicit = shouldFilter
