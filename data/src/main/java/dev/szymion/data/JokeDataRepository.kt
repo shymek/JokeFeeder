@@ -1,13 +1,13 @@
 package dev.szymion.data
 
 import dev.szymion.data.models.JokeEntity
-import dev.szymion.data.repository.JokesRemote
+import dev.szymion.data.repository.JokeDataStore
 import dev.szymion.domain.models.Joke
 import dev.szymion.domain.repositories.JokeRepository
 import javax.inject.Inject
 
 class JokeDataRepository @Inject constructor(
-    private val remoteStore: JokesRemote
+    private val remoteStore: JokeDataStore
 ) : JokeRepository {
     override suspend fun getRandomJokes(amount: Int, filterExplicit: Boolean): List<Joke> {
         return remoteStore.getRandomJokes(amount, filterExplicit).map { it.toDomain() }
