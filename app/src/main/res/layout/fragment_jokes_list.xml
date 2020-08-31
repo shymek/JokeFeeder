@@ -35,6 +35,7 @@
             android:background="@color/overlay"
             android:clickable="true"
             android:focusable="true"
+            android:visibility="gone"
             app:delayedVisibleIf="@{model.areJokesLoading}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

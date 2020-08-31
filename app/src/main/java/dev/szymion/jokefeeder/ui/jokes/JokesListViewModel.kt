@@ -26,8 +26,8 @@ class JokesListViewModel @ViewModelInject constructor(
     val showNoJokesView = ObservableBoolean()
     var filterExplicit = false
 
-    init {
-        loadJokes()
+    fun loadJokesIfEmpty() {
+        if (jokes.isEmpty()) loadJokes()
     }
 
     fun loadJokes() {
