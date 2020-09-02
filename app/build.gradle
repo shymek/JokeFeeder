@@ -22,7 +22,7 @@ android {
         versionName Versions.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField "String", "BASE_URL", '"https://api.icndb.com/"'
+        buildConfigField "String", "BASE_URL", '"http://api.icndb.com/"'
     }
 
     buildFeatures {
