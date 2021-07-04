@@ -4,6 +4,7 @@ import com.appmattus.kotlinfixture.kotlinFixture
 import dev.szymion.data.models.JokeEntity
 import dev.szymion.data.remote.Joke
 import dev.szymion.data.remote.JokesResponseModel
+import dev.szymion.data.repository.JokesRemoteImpl
 import dev.szymion.data.services.FilterOptions
 import dev.szymion.data.services.JokesService
 import kotlinx.coroutines.runBlocking
