@@ -2,7 +2,7 @@ package dependencies
 
 object Versions {
     // android configuration
-    const val buildTools = "30.0.1"
+    const val buildTools = "30.0.2"
     const val compileSdk = 30
     const val minSdk = 24
     const val targetSdk = 30
@@ -42,5 +42,5 @@ object Versions {
     const val kotlinFixture = "1.1.0"
 
     // plugins versions
-    const val detektVersion = "1.9.1"
+    const val detektVersion = "1.17.1"
 }
