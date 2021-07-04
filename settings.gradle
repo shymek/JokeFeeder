@@ -1,5 +1,4 @@
 include ':data'
-include ':remote'
 include ':domain'
 include ':app'
 rootProject.name = "JokeFeeder"

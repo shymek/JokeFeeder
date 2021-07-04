@@ -1,11 +1,6 @@
 package dev.szymion.data
 
 import com.appmattus.kotlinfixture.kotlinFixture
-import com.nhaarman.mockitokotlin2.anyOrNull
-import com.nhaarman.mockitokotlin2.mock
-import com.nhaarman.mockitokotlin2.verify
-import com.nhaarman.mockitokotlin2.verifyNoMoreInteractions
-import com.nhaarman.mockitokotlin2.whenever
 import dev.szymion.data.models.JokeEntity
 import dev.szymion.data.repository.JokeDataStore
 import dev.szymion.domain.models.Joke
@@ -14,6 +9,7 @@ import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
+import org.mockito.kotlin.*
 
 class JokeDataRepositoryTest {
 

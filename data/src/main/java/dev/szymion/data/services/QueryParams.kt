@@ -1,4 +1,4 @@
-package dev.szymion.remote.services
+package dev.szymion.data.services
 
 enum class EscapeOptions(val apiParameter: String) {
     JavaScript("javascript")

@@ -25,7 +25,6 @@ I tried to separate
 
 - Domain
 - Data
-- Remote
 - App
 
 Modules to achieve cleaner code with some volume overhead.

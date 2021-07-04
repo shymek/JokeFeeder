@@ -6,9 +6,9 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
 import dev.szymion.data.repository.JokesRemote
 import dev.szymion.jokefeeder.BuildConfig
-import dev.szymion.remote.JokesRemoteImpl
-import dev.szymion.remote.services.JokesService
-import dev.szymion.remote.services.JokesServiceFactory
+import dev.szymion.data.JokesRemoteImpl
+import dev.szymion.data.services.JokesService
+import dev.szymion.data.services.JokesServiceFactory
 import javax.inject.Singleton
 
 @InstallIn(ApplicationComponent::class)

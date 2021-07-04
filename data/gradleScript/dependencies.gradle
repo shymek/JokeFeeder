@@ -5,6 +5,11 @@ apply from: Dependencies.common
 dependencies {
     implementation project(Dependencies.Module.domain)
 
+    implementation Dependencies.Retrofit.main
+    implementation Dependencies.Retrofit.gsonConverter
+    implementation Dependencies.Retrofit.loggingInterceptor
+    implementation Dependencies.Facebook.stethoNetwork
+
     implementation Dependencies.javax
 
     testImplementation Dependencies.Test.junit

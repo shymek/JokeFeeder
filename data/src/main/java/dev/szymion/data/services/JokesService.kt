@@ -1,7 +1,7 @@
-package dev.szymion.remote.services
+package dev.szymion.data.services
 
-import dev.szymion.remote.model.JokesResponseModel
-import dev.szymion.remote.services.EscapeOptions.JavaScript
+import dev.szymion.data.remote.JokesResponseModel
+import dev.szymion.data.services.EscapeOptions.JavaScript
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query

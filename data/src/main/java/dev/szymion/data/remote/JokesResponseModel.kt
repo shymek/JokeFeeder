@@ -1,4 +1,4 @@
-package dev.szymion.remote.model
+package dev.szymion.data.remote
 
 import com.google.gson.annotations.SerializedName
 

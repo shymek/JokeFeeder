@@ -1,21 +1,17 @@
-package dev.szymion.remote
+package dev.szymion.data
 
 import com.appmattus.kotlinfixture.kotlinFixture
-import com.nhaarman.mockitokotlin2.anyOrNull
-import com.nhaarman.mockitokotlin2.mock
-import com.nhaarman.mockitokotlin2.verify
-import com.nhaarman.mockitokotlin2.verifyNoMoreInteractions
-import com.nhaarman.mockitokotlin2.whenever
 import dev.szymion.data.models.JokeEntity
-import dev.szymion.remote.model.Joke
-import dev.szymion.remote.model.JokesResponseModel
-import dev.szymion.remote.services.FilterOptions
-import dev.szymion.remote.services.JokesService
+import dev.szymion.data.remote.Joke
+import dev.szymion.data.remote.JokesResponseModel
+import dev.szymion.data.services.FilterOptions
+import dev.szymion.data.services.JokesService
 import kotlinx.coroutines.runBlocking
 import org.junit.After
-import org.junit.Assert.assertEquals
+import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
+import org.mockito.kotlin.*
 
 class JokesRemoteImplTest {
 
@@ -42,7 +38,7 @@ class JokesRemoteImplTest {
 
         val jokes = jokesRemoteImpl.getRandomJokes(42, false)
 
-        assertEquals(mappedJokes, jokes)
+        Assert.assertEquals(mappedJokes, jokes)
         verify(mockedJokesService).getRandomJokes(42, null)
     }
 
@@ -54,7 +50,7 @@ class JokesRemoteImplTest {
 
         val jokes = jokesRemoteImpl.getRandomJokes(42, true)
 
-        assertEquals(mappedJokes, jokes)
+        Assert.assertEquals(mappedJokes, jokes)
         verify(mockedJokesService).getRandomJokes(42, FilterOptions.Explicit.apiParameter)
     }
 
@@ -66,7 +62,7 @@ class JokesRemoteImplTest {
 
         val jokes = jokesRemoteImpl.getRandomJokes(-42, true)
 
-        assertEquals(mappedJokes, jokes)
+        Assert.assertEquals(mappedJokes, jokes)
         verify(mockedJokesService).getRandomJokes(-42, FilterOptions.Explicit.apiParameter)
     }
 

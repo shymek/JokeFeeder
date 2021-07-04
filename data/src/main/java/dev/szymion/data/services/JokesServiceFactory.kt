@@ -1,4 +1,4 @@
-package dev.szymion.remote.services
+package dev.szymion.data.services
 
 import com.google.gson.Gson
 import okhttp3.OkHttpClient

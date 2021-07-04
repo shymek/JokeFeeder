@@ -5,7 +5,6 @@ apply from: Dependencies.common
 dependencies {
     implementation project(Dependencies.Module.domain)
     implementation project(Dependencies.Module.data)
-    implementation project(Dependencies.Module.remote)
 
     implementation Dependencies.AndroidX.core
     implementation Dependencies.AndroidX.appCompat
