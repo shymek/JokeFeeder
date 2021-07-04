@@ -12,6 +12,7 @@ object Versions {
 
     // Libraries
     const val androidXCore = "1.3.1"
+    const val androidXCoreTesting = "2.1.0"
     const val appCompat = "1.2.0"
     const val constraintLayout = "2.0.1"
     const val fragment = "1.2.5"
@@ -32,12 +33,13 @@ object Versions {
     const val navigation = "2.3.0"
     const val bindingCollectionAdapter = "4.0.0"
     const val jacoco = "0.16.0"
-    const val gradle = "4.0.1"
-    const val jUnit5 = "1.3.2.0"
-    const val mockito = "2.2.0"
-    const val mockitoInline = "2.8.47"
+    const val gradle = "4.2.2"
+    const val jUnit5 = "1.7.1.1"
+    const val mockito = "3.2.0"
+    const val mockitoCore = "3.4.2"
+    const val mockitoInline = "3.11.2"
     const val coroutinesTest = "1.3.8"
-    const val kotlinFixture = "0.9.5"
+    const val kotlinFixture = "1.1.0"
 
     // plugins versions
     const val detektVersion = "1.9.1"

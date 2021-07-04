@@ -101,11 +101,12 @@ object Dependencies {
         const val androidXEspresso =
             "androidx.test.espresso:espresso-core:${Versions.androidXEspresso}"
         const val junit = "junit:junit:${Versions.jUnit}"
-        const val mockito = "com.nhaarman.mockitokotlin2:mockito-kotlin:${Versions.mockito}"
+        const val mockito = "org.mockito.kotlin:mockito-kotlin:${Versions.mockito}"
         const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutinesTest}"
         const val mockitoInline = "org.mockito:mockito-inline:${Versions.mockitoInline}"
         const val fixture = "com.appmattus.fixture:fixture:${Versions.kotlinFixture}"
-        const val architecture = "androidx.arch.core:core-testing:2.1.0"
+        const val architecture = "androidx.arch.core:core-testing:${Versions.androidXCoreTesting}"
+        const val mockitoCore = "org.mockito:mockito-core:${Versions.mockitoCore}"
     }
 
     const val javax = "javax.inject:javax.inject:${Versions.javaxInject}"

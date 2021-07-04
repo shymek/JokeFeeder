@@ -2,11 +2,6 @@ package dev.szymion.jokefeeder.ui.jokes
 
 import androidx.lifecycle.Observer
 import com.appmattus.kotlinfixture.kotlinFixture
-import com.nhaarman.mockitokotlin2.anyOrNull
-import com.nhaarman.mockitokotlin2.mock
-import com.nhaarman.mockitokotlin2.verify
-import com.nhaarman.mockitokotlin2.verifyNoMoreInteractions
-import com.nhaarman.mockitokotlin2.whenever
 import dev.szymion.domain.interactor.GetJokesUseCase
 import dev.szymion.domain.interactor.GetRandomNumberUseCase
 import dev.szymion.domain.models.Joke
@@ -18,6 +13,11 @@ import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
+import org.mockito.Mockito.verify
+import org.mockito.Mockito.verifyNoMoreInteractions
+import org.mockito.kotlin.anyOrNull
+import org.mockito.kotlin.mock
+import org.mockito.kotlin.whenever
 
 @ExperimentalCoroutinesApi
 class JokesListViewModelTest : BaseTestCase() {
